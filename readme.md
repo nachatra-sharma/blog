@@ -1,11 +1,11 @@
 # Task 1:
 
-````
+```
 1. Create a table (students)
 2. insert data of students like (Name, Email, and Roll Number)
 3. generate password of 8 digit and save in database.
-4. (Use dummy design for frontend)```
-````
+4. (Use dummy design for frontend)
+```
 
 ## 1. add constraints on table
 
@@ -35,4 +35,19 @@ backend side - through php | DB
 2.  Make UI Better.
 
 3. Check some corner cases.
+```
+
+## Task 2:
+
+```
+1. Design and develop the “Login of student with Roll Number and Password”.
+```
+
+## Task 3:
+
+```
+Create a table (blogs)
+insert data of blog like (Title, Description, Image)
+save in the database.
+(Use dummy design of frontend)
 ```

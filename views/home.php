@@ -1,4 +1,6 @@
-<?php ?>
+<?php
+include('config/session-manager.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,5 +11,6 @@
 </head>
 <body>
     <h1>Home</h1>
+    <?php echo $_SESSION['id']; ?> 
 </body>
 </html>

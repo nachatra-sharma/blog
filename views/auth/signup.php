@@ -1,44 +1,42 @@
+<!-- including signup logic here -->
 <?php
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $rollno = $_POST['rollno'];
-    $password = $_POST['password'];
-    if (strlen($password) === 8) {
-        $password_hash = md5($password);
-        try {
-            $sql = "insert into students (name, email, rollno, password) values ('$name', '$email', $rollno, '$password_hash')";
-            $result = mysqli_query($conn, $sql);
-            header("location: http://localhost/blog/home");
-            exit();
-        } catch (Exception $e) {
-            echo 'Caught exception: ' . $e->getMessage() . "\n";
-        }
-    } else {
-        echo "<script>alert('Password must be exactly 8 characters long.')</script>";
-    }
-}
+include('config/signup.php');
 ?>
 
+<!-- html start here -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-</head>
+    <!-- head include here -->
+    <?php
+    include('partials/header.php');
+    ?>
+<!-- body start here -->
 <body>
-    <form action="" method="post">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-        <label for="rollno">Roll No.</label>
-        <input type="number" name="rollno" id="rollno" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
-        <button type="submit" name="submit">Submit</button>
-    </form>
+    <div id="wrapper">
+        <div class="signup-form">
+            <div class="signup-container">
+                <h1>Sign Up</h1>
+                <form action="" method="post">
+                    <div class=mb-3>
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" name="name" class="form-control" id="name" required>
+                    </div>
+                    <div class=mb-3>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" required>
+                    </div>
+                    <div class=mb-3>
+                        <label for="rollno" class="form-label">Roll No.</label>
+                        <input type="text" name="rollno" class="form-control" id="rollno" required>
+                    </div>
+                    <div class=mb-3>
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm btn-block" name="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-

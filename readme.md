@@ -7,36 +7,6 @@
 4. (Use dummy design for frontend)
 ```
 
-## 1. add constraints on table
-
-```
-name = not null done
-
-email = unique and not null
-
-roll number = unique and not null
-```
-
-## 3. add password length checker
-
-```
-frontend side - through javascript
-
-backend side - through php | DB
-```
-
-## 4. Build a UI
-
-## issue coming
-
-```
-1. if the form submission was not successfull why id number is increasing.
-
-2.  Make UI Better.
-
-3. Check some corner cases.
-```
-
 ## Task 2:
 
 ```
@@ -51,3 +21,26 @@ insert data of blog like (Title, Description, Image)
 save in the database.
 (Use dummy design of frontend)
 ```
+
+## Task 4:
+
+```
+Display the “Blog List that stored in database”
+```
+
+## Some Corner Cases:
+
+```
+Note:
+
+1. Blog post option will show after login of any student.
+
+2. Blog Display option will show after login of any student
+
+3. Only your own posted blog list will be displayed. (Logged-In student posted blogs)
+
+```
+
+## Google Doc Link
+
+https://docs.google.com/document/d/1Rs52MGtYdXq5BZ3iFC5pzV92mTKm48di-ICotK04T7c/edit

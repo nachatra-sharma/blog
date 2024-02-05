@@ -36,11 +36,11 @@ include('partials/header.php');
                     $showdesc = substr($description, 0, 50);
                     echo "
                     <div class='card' style='margin-bottom:50px;width: 18rem;'>
-                    <img class='card-img-top' src='uploads/$image'>
+                    <img width='100px' height='200px' class='card-img-top' style='object-fit:cover'; src='uploads/$image'>
                     <div class='card-body'>
                     <h5 class='card-title'>$title</h5>
-                    <p class='card-text'>$showdesc</p>
-                    <a href='/blog/show-blog?id=$id' class='btn btn-primary'>Go somewhere</a>
+                    <p class='card-text'>$showdesc....</p>
+                    <a href='/blog/show-blog?id=$id' class='btn btn-primary'>Read More</a>
                     </div>
                     </div>";
                 }

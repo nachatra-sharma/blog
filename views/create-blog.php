@@ -1,13 +1,17 @@
+<!-- including create blog logic -->
 <?php
 include('config/create-blog.php');
 ?>
+<!-- html start here -->
 <!DOCTYPE html>
 <html lang="en">
+<!-- including header file -->
 <?php
 include('partials/header.php');
 ?>
 <body>
     <div id="wrapper">
+        <!-- including navbar file -->
         <?php
         include('partials/navbar.php');
         ?>

@@ -1,15 +1,18 @@
+<!-- including session manager to check if user is logged in or not -->
 <?php
 include('config/session-manager.php');
 $queryid = $_GET['id'];
 ?>
-
+<!-- html start here -->
 <!DOCTYPE html>
 <html lang="en">
+<!-- including header file -->
 <?php
 include('partials/header.php');
 ?>
 <body>
     <div id="wrapper">
+<!-- including navbar file -->
 <?php
 include('partials/navbar.php');
 ?>
@@ -23,19 +26,14 @@ include('partials/navbar.php');
                 $title = $row["title"];
                 $description = $row["description"];
                 $image = $row["image"];
-                ?>
-        <h1 class="my-3 text-center">
-        <?php echo $title; ?>
-        </h1>
-        <div class="blog-info">
-        <div class="blog-image">
-        <img class="" src="<?php echo "uploads/$image"; ?>" alt="">
-        </div>                                                        
-        <p class="w-100 my-3 blog-para">
-        <?php echo $description; ?>
-        </p>
-        </div>
-        <?php
+                echo "
+            <h1 class='my-3 text-center'>$title</h1>
+            <div class='blog-info'>
+            <div class='blog-image'>
+            <img src='uploads/$image'>
+            </div>                                                        
+            <p class='w-100 my-3 blog-para'>$description</p>
+            </div>";
             }
         }
         ?>

@@ -1,6 +1,9 @@
 <!-- including session manager to check if user is logged in or not -->
 <?php
 include('config/session-manager.php');
+if (!isset($_GET['id'])) {
+    header('location: /blog/blog-list');
+}
 $queryid = $_GET['id'];
 ?>
 <!-- html start here -->
